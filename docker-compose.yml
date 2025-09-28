@@ -11,6 +11,6 @@ services:
     volumes:
       - /volume1/docker/synology-airprint/services:/services:rw
       - /volume1/docker/synology-airprint/config:/config:rw
-      - /volume1/docker/synology-airprint/usr:/usr:rw
+    #  - /volume1/docker/synology-airprint/usr:/usr:rw
     restart: on-failure:5
     network_mode: host

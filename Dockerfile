@@ -35,6 +35,7 @@ EXPOSE 631
 # We want a mount for these
 VOLUME /config
 VOLUME /services
+VOLUME /usr
 
 # Add scripts
 ADD root /

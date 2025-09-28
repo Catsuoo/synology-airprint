@@ -3,13 +3,16 @@ version: '3.5'
 services:
   airprint:
     container_name: airprint
-    image: znetwork/synology-airprint:latest
+    image: catsuoo/synology-airprint:latest
     build: .
     restart: always
-    network_mode: "host"
+    network_mode: host
     environment:
-      CUPSADMIN: admin
-      CUPSPASSWORD: admin
+      - UID=1026 #CHANGE_TO_YOUR_UID
+      - GID=100 #CHANGE_TO_YOUR_GID
+      - CUPSADMIN=admin
+      - CUPSPASSWORD=admin
     volumes:
-      - "./services:/services"
-      - "./config:/config"
+      - /volume1/docker/synology-airprint/services:/services:rw
+      - /volume1/docker/synology-airprint/config:/config:rw
+      - /volume1/docker/synology-airprint/usr:/usr:rw

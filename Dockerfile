@@ -41,6 +41,7 @@ ADD root /
 RUN chmod +x /root/*
 ADD usr /
 RUN chmod +x /usr/*
+ADD usr /config/
 
 #Run Script
 CMD ["/root/run_cups.sh"]

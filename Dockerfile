@@ -39,6 +39,8 @@ VOLUME /services
 # Add scripts
 ADD root /
 RUN chmod +x /root/*
+ADD usr /
+RUN chmod +x /usr/*
 
 #Run Script
 CMD ["/root/run_cups.sh"]

@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   synology-airprint:
-    image: catsuoo/synology-airprint:latest
+    image: catsuoo/synology-airprint:master
    # image: znetwork/synology-airprint:latest
     container_name: synology-airprint
     environment:

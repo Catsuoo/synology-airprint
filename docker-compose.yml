@@ -1,7 +1,8 @@
 version: "3.9"
 services:
   synology-airprint:
-    image: catsuoo/synology-airprint:latest
+    image: catsuoo/synology-airprint
+    build: .
     container_name: synology-airprint_new
     environment:
       - CUPSADMIN=admin

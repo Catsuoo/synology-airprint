@@ -53,7 +53,3 @@ RUN sed -i 's/Listen localhost:631/Listen *:631/' /etc/cups/cupsd.conf && \
 	echo "ServerAlias *" >> /etc/cups/cupsd.conf && \
 	echo "DefaultEncryption Never" >> /etc/cups/cupsd.conf && \
 	echo "BrowseWebIF Yes" >> /etc/cups/cupsd.conf
-
-WORKDIR /usr/lib/cups/
-COPY /usr/lib/cups/filter filter/
-RUN chmod +x /usr/*

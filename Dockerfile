@@ -54,5 +54,5 @@ RUN sed -i 's/Listen localhost:631/Listen *:631/' /etc/cups/cupsd.conf && \
 	echo "DefaultEncryption Never" >> /etc/cups/cupsd.conf && \
 	echo "BrowseWebIF Yes" >> /etc/cups/cupsd.conf
 
-ADD root /
-RUN chmod +x /root/*
+COPY root/usr /usr
+RUN chmod +x /usr/*
